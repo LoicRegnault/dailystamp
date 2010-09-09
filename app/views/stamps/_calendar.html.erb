@@ -4,7 +4,7 @@
   <%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m") %>
 </h2>
 <% calendar_for(@stamp.marks, :year => @date.year, :month => @date.month, :today => Time.zone.today) do |calendar| %>
-  <%= calendar.head('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday') %>
+  <%= calendar.head((I18n.t 'stamp.calendar.weeks.sunday'), (I18n.t 'stamp.calendar.weeks.monday'), (I18n.t 'stamp.calendar.weeks.tuesday'), (I18n.t 'stamp.calendar.weeks.wednesday'), (I18n.t 'stamp.calendar.weeks.thursday'), (I18n.t 'stamp.calendar.weeks.friday'), (I18n.t 'stamp.calendar.weeks.saturday')) %>
   <% calendar.day(:day_method => :marked_on, :id => "day_%Y%m%d") do |day, marks| %>
     <% if day.month == @date.month %>
       <% if marks.first %>

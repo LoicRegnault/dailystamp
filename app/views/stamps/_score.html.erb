@@ -2,12 +2,12 @@
 <div class="score_goal">
   <%= stamp.goal_score %>
   <% if stamp.user == current_user %>
-    <span id="change_goal">(<%= link_to "change goal", edit_goal_stamp_path(stamp) %>)</span>
+    <span id="change_goal">(<%= link_to (I18n.t 'stamp.score.change'), edit_goal_stamp_path(stamp) %>)</span>
   <% end %>
 </div>
 <% if stamp.goal_reached? && !stamp.goal_reward.blank? %>
   <div id="goal_reward">
-    <strong>Reward:</strong>
+    <strong><%= I18n.t 'stamp.score.reward'%></strong>
     <%=h stamp.goal_reward %>
   </div>
 <% end %>

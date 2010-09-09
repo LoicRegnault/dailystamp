@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     @user.save do |result|
       if result
-        flash[:notice] = "Thank you for signing up! You are now logged in."
+        flash[:notice] = I18n.t 'user.controller.signing'
         redirect_to root_url
       else
         render :action => 'new'
@@ -27,7 +27,7 @@ class UsersController < ApplicationController
     @user.guest = false
     @user.save do |result|
       if result
-        flash[:notice] = "Successfully updated profile."
+        flash[:notice] = I18n.t 'user.controller.update'
         redirect_to root_url
       else
         render :action => 'edit'

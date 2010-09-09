@@ -1,26 +1,26 @@
-<% title "Change Goal" %>
+<% title I18n.t 'stamp.edit_goal.title' %>
 <% stylesheet "generic", "edit_goal" %>
 
 <% form_for @stamp do |f| %>
   <div id="suggestions">
-    <h3>suggestions</h3>
+    <h3><%= I18n.t 'stamp.edit_goal.suggestions' %></h3>
     <ul>
-      <li>buy a new video game</li>
-      <li>get a manicure</li>
-      <li>go to the movies</li>
-      <li>spend $50 on myself</li>
-      <li>go out to eat</li>
-      <li>take a vacation</li>
+      <li><%=I18n.t 'stamp.edit_goal.suggest.buy'%></li>
+      <li><%=I18n.t 'stamp.edit_goal.suggest.manicure'%></li>
+      <li><%=I18n.t 'stamp.edit_goal.suggest.movie'%></li>
+      <li><%=I18n.t 'stamp.edit_goal.suggest.spend'%></li>
+      <li><%=I18n.t 'stamp.edit_goal.suggest.eat'%></li>
+      <li><%=I18n.t 'stamp.edit_goal.suggest.vacation'%></li>
     </ul>
   </div>
   <p>
-    <%= label_tag :goal_score, "Target Score" %><br />
+    <%= label_tag :goal_score, (I18n.t 'stamp.edit_goal.goal_score') %><br />
     <%= f.text_field :goal_score, :size => 10 %>
   </p>
   <p>
-    <%= label_tag :goal_reward, "Reward Yourself" %><br />
+    <%= label_tag :goal_reward, (I18n.t 'stamp.edit_goal.reward') %><br />
     <%= f.text_field :goal_reward, :size => 45 %>
   </p>
-  <p><%= f.submit "Submit" %> or <%= link_to "cancel", @stamp %></p>
+  <p><%= f.submit (I18n.t 'stamp.edit_goal.submit') %> <%= I18n.t 'stamp.edit_goal.or'%> <%= link_to (I18n.t 'stamp.edit_goal.cancel'), @stamp %></p>
   <div class="clear"></div>
 <% end %>

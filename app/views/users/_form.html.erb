@@ -1,33 +1,33 @@
 <% form_for @user do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :username %><br />
+    <%= f.label (I18n.t 'user.form.username')%><br />
     <%= f.text_field :username %>
   </p>
   <p>
-    <%= f.label :email, "Email Address" %><br />
+    <%= f.label :email, (I18n.t 'user.form.email') %><br />
     <%= f.text_field :email %>
   </p>
   <p>
-    <%= f.label :time_zone %><br />
+    <%= f.label (I18n.t 'user.form.timezone') %><br />
     <%= f.time_zone_select :time_zone, ActiveSupport::TimeZone.us_zones, :include_blank => true %>
   </p>
   <% if @user.openid_identifier.blank? %>
     <p>
-      <%= f.label :password %><br />
+      <%= f.label (I18n.t 'user.form.password') %><br />
       <%= f.password_field :password %>
     </p>
     <p>
-      <%= f.label :password_confirmation, "Confirm Password" %><br />
+      <%= f.label :password_confirmation, (I18n.t 'user.form.password_confirmation') %><br />
       <%= f.password_field :password_confirmation %>
     </p>
-    <p><%= f.submit "Submit" %></p>
+    <p><%= f.submit (I18n.t 'user.form.submit') %></p>
     
-    <h2>Or use OpenID</h2>
+    <h2><%= I18n.t 'user.form.open_id' %> </h2>
   <% end %>
   <p>
-    <%= f.label :openid_identifier, "OpenID URL" %><br />
+    <%= f.label :openid_identifier, (I18n.t 'user.form.open_id_url') %><br />
     <%= f.text_field :openid_identifier %>
   </p>
-  <p><%= f.submit "Submit" %></p>
+  <p><%= f.submit (I18n.t 'user.form.submit') %></p>
 <% end %>

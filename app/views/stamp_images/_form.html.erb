@@ -1,6 +1,6 @@
 <% form_for @stamp_image, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
-  <p><strong><%= f.label :photo, "Choose an image for your stamp:" %></strong></p>
+  <p><strong><%= f.label :photo, (I18n.t 'stamp_images.form.photo') %></strong></p>
   <p><%= f.file_field :photo %></p>
-  <p><%= f.submit "Upload" %> or <%= link_to "cancel", root_url %></p>
+  <p><%= f.submit (I18n.t 'stamp_images.form.upload')%> or <%= link_to (I18n.t 'stamp_images.form.cancel'), root_url %></p>
 <% end %>

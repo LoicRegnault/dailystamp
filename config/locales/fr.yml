@@ -1,0 +1,277 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+# French translation for rails
+fr:
+  favorite:
+    detail: "Voir les détails"
+    stop: "Arrêter le suivi"
+    title: "Suivis de tampons"
+    nothing: "Vous ne suivez aucun tampons pour le moment"
+    ask: "Demander à vos amis de partagers l'URL de leurs tampons."
+    by: "par"
+
+  application:
+    unloged: "Vous êtes connecté en tant qu'invité."
+    welcome: "Bienvenue"
+    setup: "Paramètres de compte"
+    save: "Pour sauvegarder votre"
+    stamps: "tampons"
+    ystamps: "Vos Tampons"
+    watch: "Suivis de tampons"
+    update: "Modifier votre compte"
+    logout: "Déconnexion"
+    login: "Connexion"
+    already: "Vous avez déjà un compte ? "
+    created: "Ce site à été crée par"
+    rumble: "Rails Rumble 2009"
+    for: "pour"
+
+  stamp_images:
+    new:
+      title: "Nouvelle image"
+    form:
+      photo: "Choisissez une image pour votre tampon :"
+      upload: "Upload"
+      cancel: "Annuler"
+
+  stamp:
+    show:
+      title: "Tampon: "
+      collection: "Collection de tampons"
+      customize: "Modifier"
+      delete: "Supprimer"
+      watch: "Suivre ce tampon"
+      new: "Nouveau tampon"
+    index:
+      title: "Daily Stamp"
+      recent: "Tampon récent"
+      by: "par"
+      daily: "Que voulez vous faire journalièrement?"
+      start: "C'est parti"
+      private: "Garder ce tampon privé"
+      suggestion: "suggestions"
+      suggest:
+        inbox: "Vider sa boite mail"
+        piano: "Faire du pianno 30 minutes"
+        brush: "Ce brosser les dents deux fois par jours"
+        exercise: "Exercice 15 minutes"
+        ontime: "Être à l'heure"
+        clean: "Garder la voiture propre"
+        devotion: "Devotions"
+        pushup: "Faire 15 pompes"
+        smoke: "Arrêter de fumer"
+        room: "Ranger ça chambre"
+        games: "Pas plus de deux heures de jeux video"
+        journal: "Ecrire dans mon journal"
+        eat: "Manger moin d'un demi déssert"
+        draw: "Dessinez un croquis"
+        write: "Ecrire 5 pages"
+        dishes: "Faire la vaiselle"
+        sleep: "Dormir 7 heures"
+        jog: "Courir"
+        vitamin: "Prendre des vitamines"
+        pets: "Nourir les animaux"
+        deed: "Faire une bonne action"
+        plants: "Arroser les plantes"
+        soda: "Ne pas boire de soda"
+        breakfast: "Manger un petit déjeuné sain"
+        more: "plus"
+    edit_goal:
+      title: "Changer les objectifs"
+      suggestions: "suggestions"
+      goal_score: "Score ciblé"
+      reward: "Récompenser vous"
+      submit: "Soumettre"
+      cancel: "Annuler"
+      or: "ou"
+      suggest:
+        buy: "Acheter un jeux video"
+        manicure: "Faire une manucure"
+        movie: "Allé au cinéma"
+        spend: "Dépenser 50€"
+        eat: "Sortir pour dinner"
+        vacation: "Prendre des vacances"
+    edit:
+      title: "Modifier le tampon"
+      private: "Garder ce tampon privé"
+      delete: "Supprimer"
+      add: "Ajouter votre propre tampon"
+      submit: "Soumettre"
+      cancel: "Annuler"
+      or: "ou"
+    score:
+      change: "Changer les objectifs"
+      reward: "Récompense:"
+    calendar:
+      weeks:
+        sunday: "Dimanche"
+        monday: "Lundi"
+        tuesday: "Mardi"
+        wednesday: "Mercredi"
+        thursday: "Jeudi"
+        friday: "Vendredi"
+        saturday: "Samedi"
+  user:
+    form:
+      username: "Nom d'utilisateur"
+      email: "Adresse Email"
+      timezone: "Heure locale"
+      password: "Mot de passe"
+      password_confirmation: "Confimation du mot de passe"
+      submit: "Soumettre"
+      open_id: "Ou utiliser OpenID"
+      open_id_url: "OpenID URL"
+    controller:
+      update: "Profile mis à jour avec succès."
+      signing: "Merci pour votre inscription! Vous êtes maintenant connecté."
+    new:
+      title: "Inscription"
+    edit:
+      title: "Modifier votre compte"
+  user_session:
+    new:
+      title: "Connexion"
+      username: "Nom d'utilisateur"
+      password: "Mot de passe"
+      remember: "Ce souvenir de moi"
+      login: "Connexion"
+      open_id: "Ou utiliser OpenID"
+      open_id_url: "OpenID URL"
+      unloged: "Vous n'avez pas de compte ?"
+      signup: "Inscrivez vous!"
+    controller:
+      logout: "Vous avez été déconecté avec succès"
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%e %b"
+      long: "%e %B %Y"
+      long_ordinal: "%e %B %Y"
+      only_day: "%e"
+
+    day_names: [dimanche, lundi, mardi, mercredi, jeudi, vendredi, samedi]
+    abbr_day_names: [dim, lun, mar, mer, jeu, ven, sam]
+    month_names: [~, janvier, février, mars, avril, mai, juin, juillet, août, septembre, octobre, novembre, décembre]
+    abbr_month_names: [~, jan., fév., mar., avr., mai, juin, juil., août, sept., oct., nov., déc.]
+    order: [ :day, :month, :year ]
+
+  time:
+    formats:
+      default: "%d %B %Y %H:%M"
+      time: "%H:%M"
+      short: "%d %b %H:%M"
+      long: "%A %d %B %Y %H:%M:%S %Z"
+      long_ordinal: "%A %d %B %Y %H:%M:%S %Z"
+      only_second: "%S"
+    am: 'am'
+    pm: 'pm'
+
+  datetime:
+    distance_in_words:
+      half_a_minute: "une demi-minute"
+      less_than_x_seconds:
+        zero: "moins d'une seconde"
+        one: "moins de 1 seconde"
+        other: "moins de {{count}} secondes"
+      x_seconds:
+        one: "1 seconde"
+        other: "{{count}} secondes"
+      less_than_x_minutes:
+        zero: "moins d'une minute"
+        one: "moins de 1 minute"
+        other: "moins de {{count}} minutes"
+      x_minutes:
+        one: "1 minute"
+        other: "{{count}} minutes"
+      about_x_hours:
+        one: "environ une heure"
+        other: "environ {{count}} heures"
+      x_days:
+        one: "1 jour"
+        other: "{{count}} jours"
+      about_x_months:
+        one: "environ un mois"
+        other: "environ {{count}} mois"
+      x_months:
+        one: "1 mois"
+        other: "{{count}} mois"
+      about_x_years:
+        one: "environ un an"
+        other: "environ {{count}} ans"
+      over_x_years:
+        one: "plus d'un an"
+        other: "plus de {{count}} ans"
+    prompts:
+      year: "Année"
+      month: "Mois"
+      day: "Jour"
+      hour: "Heure"
+      minute: "Minute"
+      second: "Seconde"
+
+  number:
+    format:
+      precision: 3
+      separator: ','
+      delimiter: ' '
+    currency:
+      format:
+        unit: '€'
+        precision: 2
+        format: '%n %u'
+    human:
+      format:
+        # These three are to override number.format and are optional
+        # separator:
+        delimiter: ""
+        precision: 2
+      # Rails <= v2.2.2
+      # storage_units: [octet, kb, Mb, Gb, Tb]
+      # Rails >= v2.3
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: "octet"
+            other: "octets"
+          kb: "ko"
+          mb: "Mo"
+          gb: "Go"
+          tb: "To"
+
+  support:
+    array:
+      sentence_connector: 'et'
+      skip_last_comma: true
+      words_connector: ", "
+      two_words_connector: " et "
+      last_word_connector: " et "
+
+  activerecord:
+    errors:
+      template:
+        header:
+          one: "Impossible d'enregistrer {{model}}: 1 erreur"
+          other: "Impossible d'enregistrer {{model}}: {{count}} erreurs."
+        body: "Veuillez vérifier les champs suivants :"
+      messages:
+        inclusion: "n'est pas inclus(e) dans la liste"
+        exclusion: "n'est pas disponible"
+        invalid: "n'est pas valide"
+        confirmation: "ne concorde pas avec la confirmation"
+        accepted: "doit être accepté(e)"
+        empty: "doit être rempli(e)"
+        blank: "doit être rempli(e)"
+        too_long: "est trop long (pas plus de {{count}} caractères)"
+        too_short: "est trop court (au moins {{count}} caractères)"
+        wrong_length: "ne fait pas la bonne longueur (doit comporter {{count}} caractères)"
+        taken: "n'est pas disponible"
+        not_a_number: "n'est pas un nombre"
+        greater_than: "doit être supérieur à {{count}}"
+        greater_than_or_equal_to: "doit être supérieur ou égal à {{count}}"
+        equal_to: "doit être égal à {{count}}"
+        less_than: "doit être inférieur à {{count}}"
+        less_than_or_equal_to: "doit être inférieur ou égal à {{count}}"
+        odd: "doit être impair"
+        even: "doit être pair"
+        record_invalid: "La validation a échoué : {{errors}}"

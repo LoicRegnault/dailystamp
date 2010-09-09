@@ -1,28 +1,28 @@
-<% title "Log in" %>
+<% title I18n.t 'user_session.new.title' %>
 <% stylesheet "generic" %>
 
-<p>Don't have an account? <%= link_to "Sign up!", signup_path %></p>
+<p><%= I18n.t 'user_session.new.unloged'%> <%= link_to (I18n.t 'user_session.new.signup'), signup_path %></p>
 
 <% form_for @user_session do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :username %><br />
+    <%= f.label (I18n.t 'user_session.new.username') %><br />
     <%= f.text_field :username %>
   </p>
   <p>
-    <%= f.label :password %><br />
+    <%= f.label (I18n.t 'user_session.new.password') %><br />
     <%= f.password_field :password %>
   </p>
   <p>
     <%= f.check_box :remember_me %>
-    <%= f.label :remember_me %>
+    <%= f.label (I18n.t 'user_session.new.remember') %>
   </p>
-  <p><%= f.submit "Log in" %></p>
+  <p><%= f.submit (I18n.t 'user_session.new.login') %></p>
   
-  <h2>Or use OpenID</h2>
+  <h2><%= (I18n.t 'user_session.new.open_id') %></h2>
   <p>
-    <%= f.label :openid_identifier, "OpenID URL" %><br />
+    <%= f.label :openid_identifier, (I18n.t 'user_session.new.open_id_url') %><br />
     <%= f.text_field :openid_identifier %>
   </p>
-  <p><%= f.submit "Log in" %></p>
+  <p><%= f.submit (I18n.t 'user_session.new.login') %></p>
 <% end %>

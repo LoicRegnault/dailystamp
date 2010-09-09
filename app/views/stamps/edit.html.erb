@@ -1,4 +1,4 @@
-<% title "Customize Stamp" %>
+<% title I18n.t 'stamp.edit.title' %>
 <% stylesheet "generic", "edit_stamp" %>
 <% javascript "edit_stamp" %>
 <% content_for :head do %>
@@ -8,7 +8,7 @@
 <% form_for @stamp do |f| %>
   <%= f.error_messages %>
   <p><%= f.text_field :name %></p>
-  <p><%= f.check_box :private %> <%= f.label :private, "Keep this stamp private" %></p>
+  <p><%= f.check_box :private %> <%= f.label :private, (I18n.t 'stamp.edit.private') %></p>
   
   <div id="colors">
     <% for color in STAMP_COLORS %>
@@ -26,13 +26,13 @@
         <%= label_tag "stamp_stamp_image_id_#{stamp_image.id}", image_tag(stamp_image.photo.url(@stamp.color).sub(/[^\.]+$/, "png"), :size => "70x70") %>
         <div class="radio_button"><%= f.radio_button :stamp_image_id, stamp_image.id %></div>
         <% if stamp_image.user_id == current_user.id %>
-          <div class="delete"><%= link_to "delete", stamp_image, :method => :delete, :confirm => "Are you sure?" %></div>
+          <div class="delete"><%= link_to (I18n.t 'stamp.edit.delete'), stamp_image, :method => :delete, :confirm => "Are you sure?" %></div>
         <% end %>
       </div>
     <% end %>
     <div class="clear"></div>
   </div>
-  <p><strong>Or <%= link_to "add your own stamp", new_stamp_image_path, :id => "new_stamp_image_link" %></strong></p>
+  <p><strong><%= I18n.t 'stamp.edit.or'%>  <%= link_to (I18n.t 'stamp.edit.add'), new_stamp_image_path, :id => "new_stamp_image_link" %></strong></p>
   
-  <p class="buttons"><%= f.submit "Submit" %> or <%= link_to "cancel", @stamp %></p>
+  <p class="buttons"><%= f.submit (I18n.t 'stamp.edit.submit') %> <%= I18n.t 'stamp.edit.or' %> <%= link_to (I18n.t 'stamp.edit.cancel'), @stamp %></p>
 <% end %>

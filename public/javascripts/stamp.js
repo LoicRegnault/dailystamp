@@ -83,7 +83,7 @@ $(function() {
   $("#stamps a").mouseover(function() {
     $("#stamps h2").text(this.title);
   }).mouseout(function() {
-    $("#stamps h2").text("Stamp Collection");
+    $("#stamps h2").text(I18n.t 'stamp.show.collection');
   });
   
   $("#owner #stamper a").click(function(click_event) {
